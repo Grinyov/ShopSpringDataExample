@@ -8,6 +8,8 @@ import javax.persistence.Table;
 /**
  * Created by green on 09.11.2015.
  *
+ * Our entity
+ *
  */
 @Entity
 @Table(name = "shops")
