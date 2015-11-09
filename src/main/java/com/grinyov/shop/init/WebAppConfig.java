@@ -31,7 +31,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 @ComponentScan("com.grinyov")
 @PropertySource("classpath:application.properties")
-@EnableJpaRepositories("com.grinyov.shop.repository")
+@EnableJpaRepositories("com.grinyov.shop.repository") // указывает на jpa репозиторий
 public class WebAppConfig {
 
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "db.driver";
@@ -58,6 +58,7 @@ public class WebAppConfig {
         return dataSource;
     }
 
+    // указывает на то что Hibernate будет использоваться в качестве внедрения JPA
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
